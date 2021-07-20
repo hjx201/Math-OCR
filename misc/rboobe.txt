@@ -1,0 +1,31 @@
+the project thing:
+
+basically:
+take picture of math thing
+upload to opencv
+opencv breaks down the math worksheet
+
+
+1. use EAST to find clusters of math problems on paper
+2. extract math problem onto image, correct yaw
+3. read word problem (train tesseract model)
+4. solve word problem
+5. write word problem solution to right of equal sign
+
+https://blog.ayoungprogrammer.com/2013/01/equation-ocr-part-2-training-characters.html/
+
+https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
+https://github.com/opencv/opencv/blob/master/samples/dnn/text_detection.cpp
+https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/
+
+why don't you go deallocate yourself off the heap loser
+
+
+so first, we will write the code that takes in the image of the math worksheet. 
+
+let's make our own worksheet for the sake of this, to make it easier on the OCR.
+(all math problems)
+
+since the paper mentioned shadows and skewing to be a difficulty, i want to see if we can try to improve results by applying perspective transform using the equal sign method thing they mentioned (find what we have to perspective transform by and transform entire bounding box to correct distortion). -- and also using the threshold method that the other guy mentioned. (better than binarization?)
+
+since the OCR part isn't exaaaactly pertinent to the project, I'm stealing tutorial code to train this neural network.
